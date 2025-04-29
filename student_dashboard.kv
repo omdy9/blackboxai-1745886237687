@@ -1,0 +1,20 @@
+<StudentDashboard>:
+    name: "student_dashboard"
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: [50, 50, 50, 50]
+
+        Label:
+            id: attendance_label
+            text: "Attendance Percentage: Loading..."
+            font_size: 24
+            size_hint_y: None
+            height: 50
+
+        MDRaisedButton:
+            text: "Mark Attendance"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {"center_x": 0.5}
+            on_release: root.mark_attendance(self)
